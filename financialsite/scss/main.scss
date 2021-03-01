@@ -1,0 +1,265 @@
+@import "config";
+@import "utilities";
+
+// General Styling
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font;
+  background: $dark-color;
+}
+
+// Homepage
+
+#home {
+  #landing {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/bg.jpg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    div {
+      margin: auto;
+    }
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+    }
+  }
+
+  #about-us {
+    background: $primary-color;
+
+    .container {
+      background: $primary-color;
+      color: $light-color;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1.4;
+      }
+    }
+
+  }
+
+  #locations {
+    background: $mid-color;
+    color: $dark-color;
+
+    .container {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-between;
+
+      .location {
+        text-align: center;
+        height: 400px;
+
+        img {
+          width: 250px;
+          margin: auto;
+          height: 250px;
+          border-radius: 50%;
+          border: 3px solid $dark-color;
+          margin-bottom: 0.8rem;
+        }
+
+        div {
+          margin: auto;
+
+          h2 {
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  #stats {
+    background: $primary-color;
+    color: $light-color;
+    text-align: center;
+
+    .container {
+
+      .stat-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 0.4rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 300;
+          margin-bottom: 3rem;
+        }
+
+      }
+
+      h3 {
+        font-style: italic;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Services Page
+#services {
+
+  #service-header {
+
+    .container {
+      text-align: center;
+      color: $light-color;
+      margin-top: 8rem;
+
+      h1 {
+        letter-spacing: 0.1rem;
+        font-weight: 400;
+        font-size: 2rem;
+        background: $primary-color;
+        border-radius: 28px;
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+          display: inline;
+
+        }
+      }
+    }
+
+
+
+
+
+  }
+
+  #taxes,
+  #loans,
+  #retirement {
+    .container {
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.1rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1.4rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  #taxes,
+  #retirement {
+    background: $light-color;
+    color: $dark-color;
+  }
+
+  #loans {
+    background: $primary-color;
+    color: $light-color;
+  }
+}
+
+// Contact
+#contact {
+  #contact-main {
+    background: $primary-color;
+
+    .container {
+
+      color: $light-color;
+
+      h1 {
+        margin-top: 8rem;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      form {
+
+        padding: 1rem 0;
+
+        * {
+          display: block;
+          font-size: 1.54rem;
+          width: 100%;
+        }
+
+        label {
+          padding: 1rem 0;
+          font-weight: 500;
+        }
+
+        input,
+        textarea {
+          color: $dark-color;
+          padding: 0.2rem;
+        }
+
+        textarea {
+          height: 300px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: $light-color;
+
+  div {
+    margin: auto;
+
+    p {
+      margin: 0.4rem;
+    }
+  }
+}
+
+// Media Queries
+@import "media";
